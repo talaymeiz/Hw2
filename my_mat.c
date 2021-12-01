@@ -20,6 +20,9 @@ int fanctionA(int metrix[10][10] ){
                 if (x==0 || y==0){
                     metrix[i][j]= metrix[i][j];
                 }
+                else if (metrix[i][j]==0 && i!=j){
+                    metrix[i][j]=metrix[k][j]+metrix[i][k];
+                }
                 else{
                     metrix[i][j]= MIN(metrix[i][j], metrix[k][j]+metrix[i][k]);
                 }
